@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/auth_navigation_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.e_commerce.ui.fragments.auth.LoginFragment"
+        android:label="fragment_auth_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_signupFragment"
+            app:destination="@id/signupFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="com.example.e_commerce.ui.fragments.auth.SignupFragment"
+        android:label="fragment_auth_signup"
+        tools:layout="@layout/fragment_signup" >
+        <action
+            android:id="@+id/action_signupFragment_to_emailValidationFragment"
+            app:destination="@id/emailValidationFragment" />
+        <action
+            android:id="@+id/action_signupFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/emailValidationFragment"
+        android:name="com.example.e_commerce.ui.fragments.auth.EmailValidationFragment"
+        android:label="fragment_email_validation"
+        tools:layout="@layout/fragment_email_validation" />
+</navigation>

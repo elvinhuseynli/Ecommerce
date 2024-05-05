@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">E-Commerce</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="email_validation_str">Enter the OTP code sent to your email address</string>
+    <string name="email_unreceived_code">Didn\'t receive a code?</string>
+    <string name="email_regex">[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}</string>
+    <string name="password_regex">^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=\\S+$).{8,20}$</string>
+</resources>
