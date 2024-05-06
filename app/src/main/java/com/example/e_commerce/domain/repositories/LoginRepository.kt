@@ -9,7 +9,7 @@ interface LoginRepository {
 
     suspend fun getUserByEmail(emailAddress: String): Task<QuerySnapshot>
 
-    suspend fun getUserFromLocalStorage(activity: Activity): SharedPreferences
+    fun getUserFromLocalStorage(activity: Activity): SharedPreferences
 
     fun addUserToLocalStorage(activity: Activity, userId: String)
 }

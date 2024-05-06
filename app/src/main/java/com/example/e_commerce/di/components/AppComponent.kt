@@ -5,6 +5,7 @@ import com.example.e_commerce.di.modules.ViewModelsModule
 import com.example.e_commerce.di.modules.auth.LoginModule
 import com.example.e_commerce.di.modules.auth.LoginRepositoryModule
 import com.example.e_commerce.di.scopes.FeatureScope
+import com.example.e_commerce.ui.activities.AuthActivity
 import com.example.e_commerce.ui.fragments.auth.LoginFragment
 import dagger.BindsInstance
 import dagger.Component
@@ -21,6 +22,8 @@ import dagger.Component
 interface AppComponent {
 
     fun inject(loginFragment: LoginFragment)
+
+    fun inject(authActivity: AuthActivity)
 
     @Component.Factory
     interface Factory {

@@ -30,5 +30,9 @@
         android:id="@+id/emailValidationFragment"
         android:name="com.example.e_commerce.ui.fragments.auth.EmailValidationFragment"
         android:label="fragment_email_validation"
-        tools:layout="@layout/fragment_email_validation" />
+        tools:layout="@layout/fragment_email_validation" >
+        <action
+            android:id="@+id/action_emailValidationFragment_to_loginFragment"
+            app:destination="@id/loginFragment"/>
+    </fragment>
 </navigation>

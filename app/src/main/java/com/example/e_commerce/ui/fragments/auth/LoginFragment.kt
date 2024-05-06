@@ -1,5 +1,6 @@
 package com.example.e_commerce.ui.fragments.auth
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -18,6 +19,7 @@ import com.example.e_commerce.ui.activities.MainActivity
 import com.example.e_commerce.ui.intents.auth.LoginUIEffect
 import com.example.e_commerce.ui.intents.auth.LoginUIEvent
 import com.example.e_commerce.ui.intents.auth.LoginUIState
+import com.example.e_commerce.ui.reducers.auth.LoginReducer
 import com.example.e_commerce.ui.viewModelFactory.ViewModelFactory
 import com.example.e_commerce.ui.viewmodels.auth.LoginViewModel
 import kotlinx.coroutines.flow.launchIn
@@ -51,11 +53,7 @@ class LoginFragment : Fragment() {
 
         viewModel.uiState.onEach(::renderState).launchIn(viewLifecycleScope)
 
-        viewModel.uiEffect.onSubscription {
-            if (savedInstanceState == null) {
-                viewModel.onEvent(LoginUIEvent.OnCreate(requireActivity()))
-            }
-        }.onEach(::renderEffect).launchIn(viewLifecycleScope)
+        viewModel.uiEffect.onEach(::renderEffect).launchIn(viewLifecycleScope)
     }
 
     private fun setListeners() = with(binding) {
@@ -82,24 +80,16 @@ class LoginFragment : Fragment() {
             viewModel.onEvent(
                 LoginUIEvent.OnCreate(requireActivity())
             )
-            val intent = Intent(requireActivity(), MainActivity::class.java)
-            println(state.userId)
-            intent.putExtra("userId", state.userId)
-            startActivity(intent)
+            emailInput.text.clear()
+            passwordInput.text.clear()
+            changeActivity(state.userId)
         }
+    }
 
-        val content: View = requireActivity().findViewById(android.R.id.content)
-        content.viewTreeObserver.addOnPreDrawListener(object : ViewTreeObserver.OnPreDrawListener {
-            override fun onPreDraw(): Boolean {
-                if (state.userId != "") {
-                    val intent = Intent(requireActivity(), MainActivity::class.java)
-                    intent.putExtra("userId", state.userId)
-                    startActivity(intent)
-                }
-                content.viewTreeObserver.removeOnPreDrawListener(this)
-                return true
-            }
-        })
+    private fun changeActivity(userId: String) {
+        val intent = Intent(requireActivity(), MainActivity::class.java)
+        intent.putExtra("userId", userId)
+        startActivity(intent)
     }
 
     private fun renderEffect(effect: LoginUIEffect) {

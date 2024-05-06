@@ -18,7 +18,7 @@ class LoginRepositoryImpl : LoginRepository {
             .get()
     }
 
-    override suspend fun getUserFromLocalStorage(activity: Activity): SharedPreferences {
+    override fun getUserFromLocalStorage(activity: Activity): SharedPreferences {
         return activity.getSharedPreferences("app", Context.MODE_PRIVATE)
     }
 

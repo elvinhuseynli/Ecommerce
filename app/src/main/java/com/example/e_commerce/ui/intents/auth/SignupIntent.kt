@@ -12,12 +12,11 @@ data class SignupUIState(
     val emailAddressError: String = "",
     val passwordError: String = "",
     val passwordRepeatedError: String = "",
-    val fullNameError: String = ""
+    val fullNameError: String = "",
 ) : UIState
 
 
 sealed class SignupUIEvent : UIEvent {
-    object OnCreate : SignupUIEvent()
     data class OnContinueButtonClicked(
         val emailAddress: String,
         val password: String,
@@ -25,7 +24,6 @@ sealed class SignupUIEvent : UIEvent {
         val fullName: String
     ) : SignupUIEvent()
 
-    object OnLoginButtonClicked : SignupUIEvent()
     data class OnCompleteButtonClicked(val pinCode: String) : SignupUIEvent()
 }
 
