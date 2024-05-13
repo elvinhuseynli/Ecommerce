@@ -6,4 +6,5 @@
     <string name="email_unreceived_code">Didn\'t receive a code?</string>
     <string name="email_regex">[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}</string>
     <string name="password_regex">^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=\\S+$).{8,20}$</string>
+    <string name="name_regex">[A-Za-z]+</string>
 </resources>

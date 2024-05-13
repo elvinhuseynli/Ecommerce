@@ -1,4 +1,4 @@
-package com.example.e_commerce.domain.usecases
+package com.example.e_commerce.domain.usecases.auth
 
 import android.app.Activity
 import com.example.e_commerce.core_utils.PasswordHashingHelper

@@ -4,8 +4,8 @@ import android.app.Activity
 import androidx.lifecycle.viewModelScope
 import com.example.e_commerce.R
 import com.example.e_commerce.core_utils.MviViewModel
-import com.example.e_commerce.domain.usecases.GetUserFromLocalUseCase
-import com.example.e_commerce.domain.usecases.LoginUseCase
+import com.example.e_commerce.domain.usecases.auth.GetUserFromLocalUseCase
+import com.example.e_commerce.domain.usecases.auth.LoginUseCase
 import com.example.e_commerce.ui.intents.auth.LoginUIEffect
 import com.example.e_commerce.ui.intents.auth.LoginUIEvent
 import com.example.e_commerce.ui.intents.auth.LoginUIState
@@ -62,22 +62,15 @@ class LoginViewModel @Inject constructor(
             viewModelScope.launch {
                 updateState { loading() }
                 try {
-                    updateState { fieldValidation(emailErrorText, passwordErrorText) }
-
                     loginUseCase.invoke(activity, emailAddress, password) {
                         if (it == "success") {
                             updateState { updateSuccess() }
                         } else {
-                            trySendEffect { LoginUIEffect.ShowMessage(activity, it) }
+                            trySendEffect { LoginUIEffect.ShowMessage(it) }
                         }
                     }
                 } catch (e: Exception) {
-                    trySendEffect {
-                        LoginUIEffect.ShowMessage(
-                            activity,
-                            "Something unexpected happened"
-                        )
-                    }
+                    trySendEffect { LoginUIEffect.ShowMessage("Something unexpected happened") }
                 } finally {
                     updateState { idle() }
                 }

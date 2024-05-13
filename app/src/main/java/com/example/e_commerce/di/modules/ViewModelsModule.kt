@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.e_commerce.di.annotations.ViewModelKey
 import com.example.e_commerce.ui.viewModelFactory.ViewModelFactory
 import com.example.e_commerce.ui.viewmodels.auth.LoginViewModel
+import com.example.e_commerce.ui.viewmodels.auth.SignupViewModel
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
@@ -19,5 +20,10 @@ interface ViewModelsModule {
     @IntoMap
     @ViewModelKey(LoginViewModel::class)
     fun bindLoginViewModel(viewModel: LoginViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(SignupViewModel::class)
+    fun bindSignupViewModel(viewModel: SignupViewModel): ViewModel
 
 }

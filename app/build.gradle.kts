@@ -40,6 +40,9 @@ android {
     buildFeatures {
         viewBinding = true
     }
+    packaging {
+        resources.excludes.add("META-INF/*")
+    }
 }
 
 dependencies {
@@ -69,4 +72,9 @@ dependencies {
 
     implementation(libs.cookiebar2)
     implementation(libs.pinview)
+
+
+
+    implementation(libs.android.mail)
+    implementation(libs.android.activation)
 }

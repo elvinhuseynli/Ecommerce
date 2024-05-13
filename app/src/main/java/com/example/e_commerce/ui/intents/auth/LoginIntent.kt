@@ -19,5 +19,5 @@ sealed class LoginUIEvent : UIEvent {
 }
 
 sealed class LoginUIEffect : UIEffect {
-    data class ShowMessage(val activity: Activity, val msg: String) : LoginUIEffect()
+    data class ShowMessage(val msg: String) : LoginUIEffect()
 }

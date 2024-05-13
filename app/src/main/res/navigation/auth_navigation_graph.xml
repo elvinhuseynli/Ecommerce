@@ -33,6 +33,8 @@
         tools:layout="@layout/fragment_email_validation" >
         <action
             android:id="@+id/action_emailValidationFragment_to_loginFragment"
-            app:destination="@id/loginFragment"/>
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/auth_navigation_graph"
+            app:popUpToInclusive="true"/>
     </fragment>
 </navigation>
