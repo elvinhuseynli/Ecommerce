@@ -1,4 +1,4 @@
-package com.example.e_commerce.data.repositoriesImpl
+package com.example.e_commerce.data.repositoriesImpl.auth
 
 import com.example.e_commerce.domain.repositories.SignupRepository
 import com.google.firebase.Firebase

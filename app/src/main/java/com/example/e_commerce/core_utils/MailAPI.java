@@ -1,7 +1,6 @@
 package com.example.e_commerce.core_utils;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.os.AsyncTask;
 
 import java.util.Properties;
@@ -15,7 +14,7 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
 @SuppressLint("StaticFieldLeak")
-public class MailAPI extends AsyncTask<Void,Void,Void>  {
+public class MailAPI extends AsyncTask<Void, Void, Void> {
 
     Session session;
     String emailAddress, subjectOfMail, message, otpCode;
@@ -46,22 +45,22 @@ public class MailAPI extends AsyncTask<Void,Void,Void>  {
         props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.starttls.enable", "true");
 
-        session = Session.getDefaultInstance(props,
-                new javax.mail.Authenticator() {
-                    protected PasswordAuthentication getPasswordAuthentication() {
-                        return new PasswordAuthentication("noreply.stis@gmail.com", "ybgaskpymbaeaujx");
-                    }
-                });
+        session = Session.getDefaultInstance(props, new javax.mail.Authenticator() {
+            protected PasswordAuthentication getPasswordAuthentication() {
+                return new PasswordAuthentication("noreply.stis@gmail.com", "ybgaskpymbaeaujx");
+            }
+        });
 
         try {
             MimeMessage mm = new MimeMessage(session);
             mm.setFrom(new InternetAddress("noreply.stis@gmail.com"));
             mm.addRecipient(Message.RecipientType.TO, new InternetAddress(emailAddress));
             mm.setSubject(subjectOfMail);
-            if(otpCode.equals("-1")) {
+            if (otpCode.equals("-1")) {
                 mm.setText(message);
-            } else{
-                mm.setText(message+otpCode); }
+            } else {
+                mm.setText(message + otpCode);
+            }
             Transport.send(mm);
 
         } catch (MessagingException e) {

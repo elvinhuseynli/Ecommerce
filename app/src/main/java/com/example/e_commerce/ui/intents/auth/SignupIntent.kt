@@ -4,7 +4,7 @@ import android.app.Activity
 import com.example.e_commerce.core_utils.UIEffect
 import com.example.e_commerce.core_utils.UIEvent
 import com.example.e_commerce.core_utils.UIState
-import com.example.e_commerce.data.models.SignupDataModel
+import com.example.e_commerce.data.models.auth.SignupDataModel
 
 data class SignupUIState(
     val isLoading: Boolean = false,

@@ -1,6 +1,6 @@
 package com.example.e_commerce.ui.reducers.auth
 
-import com.example.e_commerce.data.models.SignupDataModel
+import com.example.e_commerce.data.models.auth.SignupDataModel
 import com.example.e_commerce.ui.intents.auth.SignupUIState
 
 object SignupReducer {

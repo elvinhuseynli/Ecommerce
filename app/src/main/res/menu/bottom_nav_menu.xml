@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home_nav_graph"
+        android:title="Home"
+        android:icon="@drawable/home_vector"/>
+
+    <item
+        android:id="@+id/products_nav_graph"
+        android:title="Products"
+        android:icon="@drawable/products_vector"/>
+
+    <item
+        android:id="@+id/campaigns_nav_graph"
+        android:title="Campaigns"
+        android:icon="@drawable/campaigns_vector"/>
+
+    <item
+        android:id="@+id/locations_nav_graph"
+        android:title="Locations"
+        android:icon="@drawable/location_vector"/>
+
+    <item
+        android:id="@+id/profile_nav_graph"
+        android:title="Profile"
+        android:icon="@drawable/profile_vector"/>
+
+
+</menu>

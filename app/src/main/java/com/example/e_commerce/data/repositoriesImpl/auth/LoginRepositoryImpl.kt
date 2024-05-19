@@ -1,4 +1,4 @@
-package com.example.e_commerce.data.repositoriesImpl
+package com.example.e_commerce.data.repositoriesImpl.auth
 
 import android.app.Activity
 import android.content.Context
