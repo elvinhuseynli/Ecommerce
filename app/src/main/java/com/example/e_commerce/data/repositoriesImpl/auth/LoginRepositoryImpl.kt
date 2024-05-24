@@ -3,7 +3,7 @@ package com.example.e_commerce.data.repositoriesImpl.auth
 import android.app.Activity
 import android.content.Context
 import android.content.SharedPreferences
-import com.example.e_commerce.domain.repositories.LoginRepository
+import com.example.e_commerce.domain.repositories.auth.LoginRepository
 import com.google.android.gms.tasks.Task
 import com.google.firebase.Firebase
 import com.google.firebase.firestore.QuerySnapshot

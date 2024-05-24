@@ -2,7 +2,7 @@ package com.example.e_commerce.domain.usecases.auth
 
 import com.example.e_commerce.core_utils.PasswordHashingHelper
 import com.example.e_commerce.data.models.auth.SignupDataModel
-import com.example.e_commerce.domain.repositories.SignupRepository
+import com.example.e_commerce.domain.repositories.auth.SignupRepository
 import java.util.Base64
 import javax.inject.Inject
 

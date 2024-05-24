@@ -1,20 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    android:scrollbars="none"
     tools:context=".ui.fragments.main.profile.ProfileFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Profile" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        />
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
-</FrameLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="50dp"
+            android:shape="ring"
+            app:cardCornerRadius="100dp">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/profile_avatar" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="Elvin Huseynli"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="50dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Account Details"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/input_text"/>
+
+            <Button
+                android:id="@+id/changePassBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Change password"
+                style="@style/ProfileButtonStyle"
+                android:drawableLeft="@drawable/password_vector"/>
+
+
+            <Button
+                android:id="@+id/settingsBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Settings"
+                style="@style/ProfileButtonStyle"
+                android:drawableLeft="@drawable/settings_vector"/>
+
+            <Button
+                android:id="@+id/favProdsBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Favorite products"
+                style="@style/ProfileButtonStyle"
+                android:drawableLeft="@drawable/favorites_vector"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="50dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Additional"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/input_text"/>
+
+            <Button
+                android:id="@+id/aboutBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="About Us"
+                style="@style/ProfileButtonStyle"
+                android:drawableLeft="@drawable/info_vector"/>
+
+
+            <Button
+                android:id="@+id/contactBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Contact details"
+                style="@style/ProfileButtonStyle"
+                android:drawableLeft="@drawable/contact_vector"/>
+
+            <Button
+                android:id="@+id/termsBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Terms and conditions"
+                style="@style/ProfileButtonStyle"
+                android:drawableLeft="@drawable/policy_vector"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginVertical="20dp"
+            android:text="Log out"
+            android:textColor="@color/red"
+            style="@style/ProfileButtonStyle"
+            android:drawableLeft="@drawable/logout_vector"/>
+
+
+
+    </LinearLayout>
+
+
+</ScrollView>

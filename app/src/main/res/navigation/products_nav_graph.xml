@@ -9,5 +9,22 @@
         android:id="@+id/productsFragment"
         android:name="com.example.e_commerce.ui.fragments.main.products.ProductsFragment"
         android:label="fragment_products"
-        tools:layout="@layout/fragment_products" />
+        tools:layout="@layout/fragment_products" >
+        <action
+            android:id="@+id/action_productsFragment_to_selectedCategoryProductsFragment"
+            app:destination="@id/selectedCategoryProductsFragment" />
+        <action
+            android:id="@+id/action_productsFragment_to_allProductsFragment"
+            app:destination="@id/allProductsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/allProductsFragment"
+        android:name="com.example.e_commerce.ui.fragments.main.products.AllProductsFragment"
+        android:label="fragment_all_products"
+        tools:layout="@layout/fragment_all_products" />
+    <fragment
+        android:id="@+id/selectedCategoryProductsFragment"
+        android:name="com.example.e_commerce.ui.fragments.main.products.SelectedCategoryProductsFragment"
+        android:label="fragment_selected_category_products"
+        tools:layout="@layout/fragment_selected_category_products" />
 </navigation>

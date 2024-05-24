@@ -2,7 +2,7 @@ package com.example.e_commerce.domain.usecases.auth
 
 import android.app.Activity
 import com.example.e_commerce.core_utils.PasswordHashingHelper
-import com.example.e_commerce.domain.repositories.LoginRepository
+import com.example.e_commerce.domain.repositories.auth.LoginRepository
 import java.util.Base64
 import javax.inject.Inject
 

@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
+import androidx.navigation.NavOptions
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI.setupWithNavController
 import com.example.e_commerce.R
@@ -29,39 +30,26 @@ class MainActivity : AppCompatActivity() {
         setupWithNavController(bottomNav, navController)
 
         bottomNav.setOnItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.home_nav_graph -> {
-                    navController.navigate(R.id.home_nav_graph, null)
-                    true
-                }
-
-                R.id.products_nav_graph -> {
-                    navController.navigate(R.id.products_nav_graph, null)
-                    true
-                }
-
-                R.id.campaigns_nav_graph -> {
-                    navController.navigate(R.id.campaigns_nav_graph, null)
-                    true
-                }
-
-                R.id.locations_nav_graph -> {
-                    navController.navigate(R.id.locations_nav_graph, null)
-                    true
-                }
-
-                R.id.profile_nav_graph -> {
-                    navController.navigate(R.id.profile_nav_graph, null)
-                    true
-                }
-
-                else -> false
+            val list = listOf(
+                R.id.home_nav_graph,
+                R.id.products_nav_graph,
+                R.id.campaigns_nav_graph,
+                R.id.locations_nav_graph,
+                R.id.profile_nav_graph
+            )
+            if(item.itemId in list) {
+                navController.navigate(item.itemId, null,
+                    NavOptions.Builder().setPopUpTo(item.itemId, true).build())
+                true
+            } else {
+                false
             }
+
         }
 
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
-                if (!navController.popBackStack()) {
+                if (navController.currentDestination?.id == R.id.homeFragment || !navController.popBackStack()) {
                     val intent = Intent(Intent.ACTION_MAIN)
                     intent.addCategory(Intent.CATEGORY_HOME)
                     intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK

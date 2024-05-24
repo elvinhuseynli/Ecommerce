@@ -16,6 +16,9 @@ activity = "1.8.0"
 constraintlayout = "2.1.4"
 navigationFragmentKtx = "2.7.7"
 pinview = "1.4.4"
+storiesprogressview = "3.0.0"
+storyview = "1.0.2-alpha"
+storyviewVersion = "1.0.2-alpha"
 
 [libraries]
 android-activation = { module = "com.sun.mail:android-activation", version.ref = "androidMail" }

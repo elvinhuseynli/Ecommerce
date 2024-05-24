@@ -7,9 +7,19 @@
     </style>
 
     <style name="BottomNavigation">
-        <item name="android:background">@color/dark_white</item>
         <item name="itemIconTint">@color/bottom_nav_icon_tint_selector</item>
         <item name="itemActiveIndicatorStyle">@style/Widget.Design.BottomNavigationView</item>
+    </style>
+
+    <style name="ProfileButtonStyle">
+        <item name="android:paddingVertical">20dp</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:backgroundTint">@color/dark_white</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:drawableLeft">?attr/drawableLeft</item>
     </style>
 
 </resources>

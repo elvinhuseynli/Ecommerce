@@ -1,6 +1,6 @@
 package com.example.e_commerce.domain.usecases.auth
 
-import com.example.e_commerce.domain.repositories.LoginRepository
+import com.example.e_commerce.domain.repositories.auth.LoginRepository
 import javax.inject.Inject
 
 class CheckExistenceUseCase @Inject constructor(

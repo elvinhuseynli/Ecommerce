@@ -7,4 +7,9 @@
     <string name="email_regex">[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}</string>
     <string name="password_regex">^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=\\S+$).{8,20}$</string>
     <string name="name_regex">[A-Za-z]+</string>
+    <string name="product_price">%1$s ₼</string>
+    <string name="product_desc">%1$s %2$s</string>
+    <string name="location">Alsat %1$s - %2$s</string>
+
+
 </resources>

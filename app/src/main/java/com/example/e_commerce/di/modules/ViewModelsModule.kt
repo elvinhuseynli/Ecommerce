@@ -6,6 +6,9 @@ import com.example.e_commerce.di.annotations.ViewModelKey
 import com.example.e_commerce.ui.viewModelFactory.ViewModelFactory
 import com.example.e_commerce.ui.viewmodels.auth.LoginViewModel
 import com.example.e_commerce.ui.viewmodels.auth.SignupViewModel
+import com.example.e_commerce.ui.viewmodels.main.ChangePasswordViewModel
+import com.example.e_commerce.ui.viewmodels.main.LocationViewModel
+import com.example.e_commerce.ui.viewmodels.main.ProductViewModel
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
@@ -25,5 +28,22 @@ interface ViewModelsModule {
     @IntoMap
     @ViewModelKey(SignupViewModel::class)
     fun bindSignupViewModel(viewModel: SignupViewModel): ViewModel
+
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(ChangePasswordViewModel::class)
+    fun bindChangePasswordViewModel(viewModel: ChangePasswordViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(ProductViewModel::class)
+    fun bindProductViewModel(viewModel: ProductViewModel): ViewModel
+
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(LocationViewModel::class)
+    fun bindLocationViewModel(viewModel: LocationViewModel): ViewModel
 
 }

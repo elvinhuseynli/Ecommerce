@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/storyContainer"
+    android:layout_width="65dp"
+    android:layout_height="65dp"
+    android:layout_marginStart="15dp"
+    android:layout_marginTop="10dp"
+    app:cardCornerRadius="100dp"
+    app:strokeColor="@color/green"
+    app:strokeWidth="3dp">
+
+    <ImageView
+        android:id="@+id/ivStory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/campaign1" />
+
+</com.google.android.material.card.MaterialCardView>

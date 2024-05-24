@@ -1,4 +1,4 @@
-package com.example.e_commerce.domain.repositories
+package com.example.e_commerce.domain.repositories.auth
 
 import android.app.Activity
 import android.content.SharedPreferences

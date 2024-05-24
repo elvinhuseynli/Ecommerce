@@ -1,4 +1,4 @@
-package com.example.e_commerce.domain.repositories
+package com.example.e_commerce.domain.repositories.auth
 
 import com.google.firebase.firestore.CollectionReference
 

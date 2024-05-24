@@ -74,6 +74,11 @@ dependencies {
     implementation(libs.pinview)
 
 
+    implementation ("com.github.bumptech.glide:glide:4.16.0")
+    implementation("com.github.OMARIHAMZA:StoryView:1.0.2-alpha")
+    implementation("com.google.zxing:core:3.2.1")
+
+    implementation("com.google.android.gms:play-services-maps:18.2.0")
 
     implementation(libs.android.mail)
     implementation(libs.android.activation)
