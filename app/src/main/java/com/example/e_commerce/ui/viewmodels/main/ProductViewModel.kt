@@ -30,7 +30,11 @@ class ProductViewModel @Inject constructor(
 
     override fun onEvent(event: ProductUIEvent) {
         when (event) {
-            is ProductUIEvent.OnAddButtonClicked -> handleOnAddButtonClickedEvent(event.productId)
+            is ProductUIEvent.OnAddButtonClicked -> handleOnAddButtonClickedEvent(
+                event.userId,
+                event.productId
+            )
+
             is ProductUIEvent.OnAllViewCreated -> handleOnAllViewCreatedEvent(event.userId)
             is ProductUIEvent.OnCategoryViewCreated -> handleOnCategoryViewCreated(
                 event.userId,
@@ -168,7 +172,7 @@ class ProductViewModel @Inject constructor(
         }
     }
 
-    private fun handleOnAddButtonClickedEvent(productId: String) {
+    private fun handleOnAddButtonClickedEvent(userId: String, productId: String) {
 
     }
 }

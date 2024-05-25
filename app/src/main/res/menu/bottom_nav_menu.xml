@@ -12,9 +12,9 @@
         android:icon="@drawable/products_vector"/>
 
     <item
-        android:id="@+id/campaigns_nav_graph"
-        android:title="Campaigns"
-        android:icon="@drawable/campaigns_vector"/>
+        android:id="@+id/carts_nav_graph"
+        android:title="Cart"
+        android:icon="@drawable/cart_vector"/>
 
     <item
         android:id="@+id/locations_nav_graph"

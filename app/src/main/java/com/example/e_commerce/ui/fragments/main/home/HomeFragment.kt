@@ -47,18 +47,9 @@ class HomeFragment : Fragment() {
             }
             recyclerView.visibility = View.VISIBLE
         }
-
-        setListeners()
-
         setCampaignRV()
 
         generateBarcode()
-    }
-
-    private fun setListeners() = with(binding){
-        seeAllBtn.setOnClickListener {
-            findNavController().navigate(R.id.campaigns_nav_graph)
-        }
     }
 
     private fun generateBarcode() = with(binding) {

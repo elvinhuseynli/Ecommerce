@@ -21,6 +21,7 @@ sealed class ProductUIEvent : UIEvent {
     data class OnFavoriteViewCreated(val userId: String) : ProductUIEvent()
 
     data class OnAddButtonClicked(
+        val userId: String,
         val productId: String
     ) : ProductUIEvent()
 

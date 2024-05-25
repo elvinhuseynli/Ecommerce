@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
             val list = listOf(
                 R.id.home_nav_graph,
                 R.id.products_nav_graph,
-                R.id.campaigns_nav_graph,
+                R.id.carts_nav_graph,
                 R.id.locations_nav_graph,
                 R.id.profile_nav_graph
             )

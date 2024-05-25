@@ -85,18 +85,6 @@
                 android:textSize="20sp"
                 android:textColor="@color/input_text"/>
 
-            <Button
-                android:id="@+id/seeAllBtn"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/blue"
-                android:paddingVertical="7.5dp"
-                android:text="See all"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                app:cornerRadius="10dp"/>
-
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
