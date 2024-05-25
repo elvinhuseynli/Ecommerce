@@ -2,10 +2,12 @@ package com.example.e_commerce.ui.viewmodels.main
 
 import androidx.lifecycle.viewModelScope
 import com.example.e_commerce.core_utils.MviViewModel
-import com.example.e_commerce.data.models.auth.ProductDataModel
+import com.example.e_commerce.data.models.main.ProductDataModel
 import com.example.e_commerce.domain.usecases.main.FetchAllProductsUseCase
 import com.example.e_commerce.domain.usecases.main.FetchProductsByCategoryUseCase
+import com.example.e_commerce.domain.usecases.main.GetCartProductsUseCase
 import com.example.e_commerce.domain.usecases.main.GetFavProductsUseCase
+import com.example.e_commerce.domain.usecases.main.UpdateCartProductsUseCase
 import com.example.e_commerce.domain.usecases.main.UpdateFavProductsUseCase
 import com.example.e_commerce.ui.intents.main.ProductUIEffect
 import com.example.e_commerce.ui.intents.main.ProductUIEvent
@@ -14,6 +16,7 @@ import com.example.e_commerce.ui.reducers.main.ProductReducer
 import com.example.e_commerce.ui.reducers.main.ProductReducer.clearSearchData
 import com.example.e_commerce.ui.reducers.main.ProductReducer.idle
 import com.example.e_commerce.ui.reducers.main.ProductReducer.loading
+import com.example.e_commerce.ui.reducers.main.ProductReducer.updateCart
 import com.example.e_commerce.ui.reducers.main.ProductReducer.updateData
 import com.example.e_commerce.ui.reducers.main.ProductReducer.updateFavoritesList
 import com.example.e_commerce.ui.reducers.main.ProductReducer.updateSearchData
@@ -24,7 +27,9 @@ class ProductViewModel @Inject constructor(
     private val fetchProductsByCategoryUseCase: FetchProductsByCategoryUseCase,
     private val fetchAllProductsUseCase: FetchAllProductsUseCase,
     private val updateFavProductsUseCase: UpdateFavProductsUseCase,
-    private val getFavProductsUseCase: GetFavProductsUseCase
+    private val getFavProductsUseCase: GetFavProductsUseCase,
+    private val getCartProductsUseCase: GetCartProductsUseCase,
+    private val updateCartProductsUseCase: UpdateCartProductsUseCase
 ) : MviViewModel<ProductUIState, ProductUIEvent, ProductUIEffect>() {
     override fun getInitialState(): ProductUIState = ProductReducer.getInitialState()
 
@@ -78,8 +83,11 @@ class ProductViewModel @Inject constructor(
                         }
                     }
                 }
-
-
+                getCartProductsUseCase.invoke(userId, {
+                    trySendEffect { ProductUIEffect.ShowMessage(it) }
+                }) {
+                    updateState { updateCart(it) }
+                }
             } catch (e: Exception) {
                 trySendEffect { ProductUIEffect.ShowMessage("Something unexpected happened") }
                 updateState { idle() }
@@ -137,6 +145,11 @@ class ProductViewModel @Inject constructor(
                 }) {
                     updateState { updateFavoritesList(it) }
                 }
+                getCartProductsUseCase.invoke(userId, {
+                    trySendEffect { ProductUIEffect.ShowMessage(it) }
+                }) {
+                    updateState { updateCart(it) }
+                }
 
             } catch (e: Exception) {
                 trySendEffect { ProductUIEffect.ShowMessage("Something unexpected happened") }
@@ -165,6 +178,11 @@ class ProductViewModel @Inject constructor(
                 }) {
                     updateState { updateFavoritesList(it) }
                 }
+                getCartProductsUseCase.invoke(userId, {
+                    trySendEffect { ProductUIEffect.ShowMessage(it) }
+                }) {
+                    updateState { updateCart(it) }
+                }
             } catch (e: Exception) {
                 trySendEffect { ProductUIEffect.ShowMessage("Something unexpected happened") }
                 updateState { idle() }
@@ -173,6 +191,23 @@ class ProductViewModel @Inject constructor(
     }
 
     private fun handleOnAddButtonClickedEvent(userId: String, productId: String) {
-
+        viewModelScope.launch {
+            try {
+                with(uiState.value.cart){
+                    if(productId in this.keys) {
+                        val count = this[productId]!!
+                        this[productId] = count+1
+                    } else {
+                        this[productId] = 1
+                    }
+                    updateState { updateCart(this@with) }
+                }
+                updateCartProductsUseCase.invoke(userId, uiState.value.cart) {
+                    updateState { updateCart(it) }
+                }
+            } catch (e: Exception) {
+                trySendEffect { ProductUIEffect.ShowMessage("Something unexpected happened") }
+            }
+        }
     }
 }

@@ -1,6 +1,6 @@
 package com.example.e_commerce.domain.usecases.main
 
-import com.example.e_commerce.data.models.auth.LocationDataModel
+import com.example.e_commerce.data.models.main.LocationDataModel
 import com.example.e_commerce.domain.repositories.main.LocationRepository
 import javax.inject.Inject
 

@@ -1,6 +1,6 @@
 package com.example.e_commerce.ui.reducers.main
 
-import com.example.e_commerce.data.models.auth.ProductDataModel
+import com.example.e_commerce.data.models.main.ProductDataModel
 import com.example.e_commerce.ui.intents.main.ProductUIState
 
 object ProductReducer {
@@ -23,4 +23,8 @@ object ProductReducer {
     fun ProductUIState.updateFavoritesList(
         favoritesList: ArrayList<String>
     ) = copy(favoritesList = favoritesList)
+
+    fun ProductUIState.updateCart(
+        cart: HashMap<String, Int>
+    ) = copy(cart = cart)
 }

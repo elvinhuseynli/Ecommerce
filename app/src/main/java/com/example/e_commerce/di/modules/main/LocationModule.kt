@@ -1,6 +1,6 @@
 package com.example.e_commerce.di.modules.main
 
-import com.example.e_commerce.data.repositoriesImpl.auth.LocationRepositoryImpl
+import com.example.e_commerce.data.repositoriesImpl.main.LocationRepositoryImpl
 import com.example.e_commerce.di.scopes.FeatureScope
 import com.example.e_commerce.domain.repositories.main.LocationRepository
 import dagger.Module

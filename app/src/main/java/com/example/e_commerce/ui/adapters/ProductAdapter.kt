@@ -10,7 +10,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.content.res.AppCompatResources
 import com.example.e_commerce.R
-import com.example.e_commerce.data.models.auth.ProductDataModel
+import com.example.e_commerce.data.models.main.ProductDataModel
 
 class ProductAdapter(
     context: Context,

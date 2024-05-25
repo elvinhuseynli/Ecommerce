@@ -87,7 +87,7 @@ class SelectedCategoryProductsFragment : Fragment() {
 
         state.data.let {
             adapter = ProductAdapter(requireContext(), state.updatedList, state.favoritesList, {
-
+                viewModel.onEvent(ProductUIEvent.OnAddButtonClicked(userId, it))
             }) {
                 viewModel.onEvent(ProductUIEvent.OnFavButtonClicked(userId, it))
                 updateAdapter()

@@ -3,7 +3,7 @@ package com.example.e_commerce.ui.intents.main
 import com.example.e_commerce.core_utils.UIEffect
 import com.example.e_commerce.core_utils.UIEvent
 import com.example.e_commerce.core_utils.UIState
-import com.example.e_commerce.data.models.auth.LocationDataModel
+import com.example.e_commerce.data.models.main.LocationDataModel
 
 data class LocationUIState(
     val data: List<LocationDataModel> = listOf(),

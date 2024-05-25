@@ -1,6 +1,6 @@
 package com.example.e_commerce.ui.reducers.main
 
-import com.example.e_commerce.data.models.auth.LocationDataModel
+import com.example.e_commerce.data.models.main.LocationDataModel
 import com.example.e_commerce.ui.intents.main.LocationUIState
 
 object LocationReducer {

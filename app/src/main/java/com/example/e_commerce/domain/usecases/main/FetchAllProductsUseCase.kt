@@ -1,6 +1,6 @@
 package com.example.e_commerce.domain.usecases.main
 
-import com.example.e_commerce.data.models.auth.ProductDataModel
+import com.example.e_commerce.data.models.main.ProductDataModel
 import com.example.e_commerce.domain.repositories.main.ProductRepository
 import javax.inject.Inject
 
@@ -27,7 +27,6 @@ class FetchAllProductsUseCase @Inject constructor(
                             )
                         )
                     }
-                    callback.invoke("success")
                     callbackData.invoke(data)
                 } else {
                     callback.invoke("No data available")

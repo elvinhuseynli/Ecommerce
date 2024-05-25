@@ -1,4 +1,4 @@
-package com.example.e_commerce.data.models.auth
+package com.example.e_commerce.data.models.main
 
 data class ProductDataModel(
     val productId: String,

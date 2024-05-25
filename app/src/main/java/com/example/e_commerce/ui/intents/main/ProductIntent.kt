@@ -3,14 +3,15 @@ package com.example.e_commerce.ui.intents.main
 import com.example.e_commerce.core_utils.UIEffect
 import com.example.e_commerce.core_utils.UIEvent
 import com.example.e_commerce.core_utils.UIState
-import com.example.e_commerce.data.models.auth.ProductDataModel
+import com.example.e_commerce.data.models.main.ProductDataModel
 
 
 data class ProductUIState(
     val data: List<ProductDataModel> = listOf(),
     val isLoading: Boolean = false,
     val updatedList: List<ProductDataModel> = listOf(),
-    val favoritesList: ArrayList<String> = arrayListOf()
+    val favoritesList: ArrayList<String> = arrayListOf(),
+    val cart: HashMap<String, Int> = hashMapOf()
 ) : UIState
 
 sealed class ProductUIEvent : UIEvent {

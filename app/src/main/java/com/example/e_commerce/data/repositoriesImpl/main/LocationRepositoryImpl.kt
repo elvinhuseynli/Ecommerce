@@ -1,4 +1,4 @@
-package com.example.e_commerce.data.repositoriesImpl.auth
+package com.example.e_commerce.data.repositoriesImpl.main
 
 import com.example.e_commerce.domain.repositories.main.LocationRepository
 import com.google.android.gms.tasks.Task

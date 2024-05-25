@@ -6,6 +6,8 @@ import com.example.e_commerce.di.modules.auth.LoginModule
 import com.example.e_commerce.di.modules.auth.LoginRepositoryModule
 import com.example.e_commerce.di.modules.auth.SignupModule
 import com.example.e_commerce.di.modules.auth.SignupRepositoryModule
+import com.example.e_commerce.di.modules.main.CartProductModule
+import com.example.e_commerce.di.modules.main.CartProductRepositoryModule
 import com.example.e_commerce.di.modules.main.ChangePasswordModule
 import com.example.e_commerce.di.modules.main.ChangePasswordRepositoryModule
 import com.example.e_commerce.di.modules.main.LocationModule
@@ -17,6 +19,7 @@ import com.example.e_commerce.ui.activities.AuthActivity
 import com.example.e_commerce.ui.fragments.auth.EmailValidationFragment
 import com.example.e_commerce.ui.fragments.auth.LoginFragment
 import com.example.e_commerce.ui.fragments.auth.SignupFragment
+import com.example.e_commerce.ui.fragments.main.cart.CartsFragment
 import com.example.e_commerce.ui.fragments.main.locations.LocationsFragment
 import com.example.e_commerce.ui.fragments.main.products.AllProductsFragment
 import com.example.e_commerce.ui.fragments.main.products.ProductsFragment
@@ -40,6 +43,8 @@ import dagger.Component
         ProductRepositoryModule::class,
         LocationModule::class,
         LocationRepositoryModule::class,
+        CartProductModule::class,
+        CartProductRepositoryModule::class,
         ViewModelsModule::class,
     ]
 )
@@ -59,6 +64,8 @@ interface AppComponent {
     fun inject(favoriteProductsFragment: FavoriteProductsFragment)
 
     fun inject(locationsFragment: LocationsFragment)
+
+    fun inject(cartsFragment: CartsFragment)
 
 
     @Component.Factory

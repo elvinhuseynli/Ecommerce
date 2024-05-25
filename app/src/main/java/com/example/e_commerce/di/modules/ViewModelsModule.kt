@@ -6,6 +6,7 @@ import com.example.e_commerce.di.annotations.ViewModelKey
 import com.example.e_commerce.ui.viewModelFactory.ViewModelFactory
 import com.example.e_commerce.ui.viewmodels.auth.LoginViewModel
 import com.example.e_commerce.ui.viewmodels.auth.SignupViewModel
+import com.example.e_commerce.ui.viewmodels.main.CartProductViewModel
 import com.example.e_commerce.ui.viewmodels.main.ChangePasswordViewModel
 import com.example.e_commerce.ui.viewmodels.main.LocationViewModel
 import com.example.e_commerce.ui.viewmodels.main.ProductViewModel
@@ -45,5 +46,11 @@ interface ViewModelsModule {
     @IntoMap
     @ViewModelKey(LocationViewModel::class)
     fun bindLocationViewModel(viewModel: LocationViewModel): ViewModel
+
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(CartProductViewModel::class)
+    fun bindCartProductViewModel(viewModel: CartProductViewModel): ViewModel
 
 }

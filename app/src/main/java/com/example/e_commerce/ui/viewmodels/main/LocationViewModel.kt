@@ -2,8 +2,7 @@ package com.example.e_commerce.ui.viewmodels.main
 
 import androidx.lifecycle.viewModelScope
 import com.example.e_commerce.core_utils.MviViewModel
-import com.example.e_commerce.data.models.auth.LocationDataModel
-import com.example.e_commerce.data.models.auth.ProductDataModel
+import com.example.e_commerce.data.models.main.LocationDataModel
 import com.example.e_commerce.domain.usecases.main.GetLocationsUseCase
 import com.example.e_commerce.ui.intents.main.LocationUIEffect
 import com.example.e_commerce.ui.intents.main.LocationUIEvent
@@ -14,8 +13,6 @@ import com.example.e_commerce.ui.reducers.main.LocationReducer.idle
 import com.example.e_commerce.ui.reducers.main.LocationReducer.loading
 import com.example.e_commerce.ui.reducers.main.LocationReducer.updateData
 import com.example.e_commerce.ui.reducers.main.LocationReducer.updateSearchData
-import com.example.e_commerce.ui.reducers.main.ProductReducer.clearSearchData
-import com.example.e_commerce.ui.reducers.main.ProductReducer.updateSearchData
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
