@@ -49,7 +49,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Account Details"
+                android:text="@string/account_details"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:textColor="@color/input_text"/>
@@ -58,7 +58,7 @@
                 android:id="@+id/changePassBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Change password"
+                android:text="@string/change_password"
                 style="@style/ProfileButtonStyle"
                 android:drawableLeft="@drawable/password_vector"/>
 
@@ -67,7 +67,7 @@
                 android:id="@+id/settingsBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Settings"
+                android:text="@string/settings"
                 style="@style/ProfileButtonStyle"
                 android:drawableLeft="@drawable/settings_vector"/>
 
@@ -75,7 +75,7 @@
                 android:id="@+id/favProdsBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Favorite products"
+                android:text="@string/favorite_products"
                 style="@style/ProfileButtonStyle"
                 android:drawableLeft="@drawable/favorites_vector"/>
 
@@ -92,7 +92,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Additional"
+                android:text="@string/additional"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:textColor="@color/input_text"/>
@@ -101,7 +101,7 @@
                 android:id="@+id/aboutBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="About Us"
+                android:text="@string/about_us"
                 style="@style/ProfileButtonStyle"
                 android:drawableLeft="@drawable/info_vector"/>
 
@@ -110,7 +110,7 @@
                 android:id="@+id/contactBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Contact details"
+                android:text="@string/contact_details"
                 style="@style/ProfileButtonStyle"
                 android:drawableLeft="@drawable/contact_vector"/>
 
@@ -118,7 +118,7 @@
                 android:id="@+id/termsBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Terms and conditions"
+                android:text="@string/terms_and_conditions"
                 style="@style/ProfileButtonStyle"
                 android:drawableLeft="@drawable/policy_vector"/>
 
@@ -130,7 +130,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
             android:layout_marginBottom="20dp"
-            android:text="Log out"
+            android:text="@string/log_out"
             android:textColor="@color/red"
             style="@style/ProfileButtonStyle"
             android:drawableLeft="@drawable/logout_vector"/>

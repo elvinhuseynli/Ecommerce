@@ -8,11 +8,6 @@ import android.widget.ArrayAdapter
 import com.example.e_commerce.databinding.ItemLangBinding
 
 
-data class LanguageData(
-    val image: Int,
-    val text: String
-)
-
 class LanguageAdapter(context: Context) : ArrayAdapter<LanguageData>(context, 0) {
 
     private lateinit var binding: ItemLangBinding

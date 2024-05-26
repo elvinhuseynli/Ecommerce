@@ -1,2 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="email_validation_str">Email adresinə göndərilən OTP kodu daxil et</string>
+    <string name="email_unreceived_code">Kod gəlmədi?</string>
+    <string name="log_in_title">Daxil ol</string>
+    <string name="email_address_input">Email adresi</string>
+    <string name="password_input">Şifrə</string>
+    <string name="no_acc">Hesabınız yoxdur?</string>
+    <string name="sign_up_here">Qeydiyyatdan keç</string>
+    <string name="sign_up_title">Qeydiyyat</string>
+    <string name="full_name_input">Ad, Soyad</string>
+    <string name="confirm_password_input">Şifrəni təsdiqlə</string>
+    <string name="next_btn">Növbəti</string>
+    <string name="have_an_account">Artıq hesabın var?</string>
+    <string name="sign_in_here">Daxil ol</string>
+    <string name="confirm_btn">Təsdiqlə</string>
+    <string name="wrong_email_address">Yanlış email adresi?</string>
+    <string name="edit_now_btn">Düzəliş et</string>
+    <string name="send_again">Yenidən göndər</string>
+    <string name="home_title">Əsas</string>
+    <string name="campaigns">Kampaniyalar</string>
+    <string name="products">Məhsullar</string>
+    <string name="see_all">Hamısı</string>
+    <string name="search_products">Məhsul axtar</string>
+    <string name="add_btn">Əlavə et</string>
+    <string name="cart">Səbət</string>
+    <string name="total">Toplam</string>
+    <string name="alsatx_store">AlSatX Market</string>
+    <string name="search_locations">Ünvan axtar</string>
+    <string name="account_details">Profil Detalları</string>
+    <string name="change_password">Şifrəni dəyiş</string>
+    <string name="settings">Tənzimləmələr</string>
+    <string name="favorite_products">Sevilən məhsullar</string>
+    <string name="additional">Əlavə</string>
+    <string name="about_us">Haqqımızda</string>
+    <string name="contact_details">Əlaqə məlumatları</string>
+    <string name="terms_and_conditions">Şərtlər və qaydalar</string>
+    <string name="log_out">Çıxış et</string>
+    <string name="new_password">Yeni Şifrə</string>
+    <string name="repeat_new_password">Yeni şifrəni təkrarla</string>
+    <string name="update">Yenilə</string>
+    <string name="choose_language">Dili dəyiş</string>
+</resources>

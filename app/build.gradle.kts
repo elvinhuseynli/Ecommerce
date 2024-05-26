@@ -79,6 +79,8 @@ dependencies {
     implementation("com.google.zxing:core:3.2.1")
 
     implementation("com.google.android.gms:play-services-maps:18.2.0")
+    implementation("com.github.YarikSOffice:lingver:1.3.0")
+
 
     implementation(libs.android.mail)
     implementation(libs.android.activation)

@@ -33,7 +33,7 @@
             app:closeIcon="@drawable/close_vector"
             app:iconifiedByDefault="false"
             app:queryBackground="@android:color/transparent"
-            app:queryHint="Search products"
+            app:queryHint="@string/search_products"
             app:searchIcon="@drawable/search_vector" />
 
     </LinearLayout>

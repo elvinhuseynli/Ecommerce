@@ -79,7 +79,7 @@ class EmailValidationFragment : Fragment() {
             }
         }
 
-        sendButton.text = if (!state.stateChanged) "Send again" else state.timeLeft
+        sendButton.text = if (!state.stateChanged) getString(R.string.send_again) else state.timeLeft
 
         if(state.isComplete) {
             findNavController().navigate(R.id.action_emailValidationFragment_to_loginFragment)

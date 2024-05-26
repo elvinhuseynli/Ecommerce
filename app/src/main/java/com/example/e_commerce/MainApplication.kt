@@ -3,6 +3,7 @@ package com.example.e_commerce
 import android.app.Application
 import com.example.e_commerce.di.components.AppComponent
 import com.example.e_commerce.di.components.DaggerAppComponent
+import com.yariksoffice.lingver.Lingver
 
 class MainApplication: Application() {
 
@@ -20,6 +21,7 @@ class MainApplication: Application() {
         super.onCreate()
         app = this
         appComponent = DaggerAppComponent.factory().create(this)
+        Lingver.init(this, "az")
     }
 
 

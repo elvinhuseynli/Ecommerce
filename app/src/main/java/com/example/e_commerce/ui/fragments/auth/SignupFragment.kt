@@ -72,7 +72,7 @@ class SignupFragment : Fragment() {
 
     private fun renderState(state: SignupUIState) = with(binding) {
         progressBar.visibility = if (state.isLoading) View.VISIBLE else View.GONE
-        nextButton.text = if (state.isLoading) "" else "Next"
+        nextButton.text = if (state.isLoading) "" else getString(R.string.next_btn)
         emailInput.error = state.emailAddressError.ifEmpty { null }
         passwordInput.error = state.passwordError.ifEmpty { null }
         passwordRepeatedInput.error = state.passwordRepeatedError.ifEmpty { null }

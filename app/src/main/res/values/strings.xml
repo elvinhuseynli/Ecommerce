@@ -1,15 +1,54 @@
 <resources>
-    <string name="app_name">E-Commerce</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_name" translatable="false">E-Commerce</string>
+
+    <string name="email_regex" translatable="false">[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}</string>
+    <string name="password_regex" translatable="false">^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=\\S+$).{8,20}$</string>
+    <string name="name_regex" translatable="false">[A-Za-z]+</string>
+    <string name="product_price" translatable="false">%1$s ₼</string>
+    <string name="product_desc" translatable="false">%1$s %2$s</string>
+    <string name="location" translatable="false">Alsat %1$s - %2$s</string>
+
 
     <string name="email_validation_str">Enter the OTP code sent to your email address</string>
     <string name="email_unreceived_code">Didn\'t receive a code?</string>
-    <string name="email_regex">[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}</string>
-    <string name="password_regex">^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=\\S+$).{8,20}$</string>
-    <string name="name_regex">[A-Za-z]+</string>
-    <string name="product_price">%1$s ₼</string>
-    <string name="product_desc">%1$s %2$s</string>
-    <string name="location">Alsat %1$s - %2$s</string>
+    <string name="log_in_title">Log in</string>
+    <string name="email_address_input">Email address</string>
+    <string name="password_input">Password</string>
+    <string name="no_acc">Don\'t you have an account?</string>
+    <string name="sign_up_here">Sign up here</string>
+    <string name="sign_up_title">Sign up</string>
+    <string name="full_name_input">Full name</string>
+    <string name="confirm_password_input">Confirm password</string>
+    <string name="next_btn">Next</string>
+    <string name="have_an_account">Already have an account?</string>
+    <string name="sign_in_here">Sign in here</string>
+    <string name="confirm_btn">Confirm</string>
+    <string name="wrong_email_address">Wrong email address?</string>
+    <string name="edit_now_btn">Edit now</string>
+    <string name="send_again">Send again</string>
+    <string name="home_title">Home</string>
+    <string name="campaigns">Campaigns</string>
+    <string name="products">Products</string>
+    <string name="see_all">See all</string>
+    <string name="search_products">Search products</string>
+    <string name="add_btn">Add</string>
+    <string name="cart">Cart</string>
+    <string name="total">Total</string>
+    <string name="alsatx_store">AlSatX Store</string>
+    <string name="search_locations">Search locations</string>
+    <string name="account_details">Account Details</string>
+    <string name="change_password">Change password</string>
+    <string name="settings">Settings</string>
+    <string name="favorite_products">Favorite products</string>
+    <string name="additional">Additional</string>
+    <string name="about_us">About Us</string>
+    <string name="contact_details">Contact details</string>
+    <string name="terms_and_conditions">Terms and conditions</string>
+    <string name="log_out">Log out</string>
+    <string name="new_password">New Password</string>
+    <string name="repeat_new_password">Repeat new password</string>
+    <string name="update">Update</string>
+    <string name="choose_language">Choose language</string>
 
 
 </resources>

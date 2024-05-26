@@ -31,7 +31,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="AlSatX Store"
+                android:text="@string/alsatx_store"
                 android:textColor="@color/blue"
                 android:textSize="20sp"
                 android:textStyle="bold" />

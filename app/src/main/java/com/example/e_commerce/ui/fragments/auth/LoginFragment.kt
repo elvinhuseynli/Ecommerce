@@ -72,7 +72,7 @@ class LoginFragment : Fragment() {
 
     private fun renderState(state: LoginUIState) = with(binding) {
         progressBar.visibility = if (state.isLoading) View.VISIBLE else View.GONE
-        loginButton.text = if (state.isLoading) "" else "Log in"
+        loginButton.text = if (state.isLoading) "" else getString(R.string.log_in_title)
         emailInput.error = state.emailAddressError.ifEmpty { null }
         passwordInput.error = state.passwordError.ifEmpty { null }
 

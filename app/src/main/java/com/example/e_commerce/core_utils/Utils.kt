@@ -8,6 +8,7 @@ import androidx.lifecycle.LifecycleCoroutineScope
 import androidx.lifecycle.lifecycleScope
 import com.example.e_commerce.R
 import com.example.e_commerce.ui.adapters.CampaignsModel
+import com.example.e_commerce.ui.adapters.LanguageData
 import com.example.e_commerce.ui.adapters.ProductCategoryModel
 import com.example.e_commerce.ui.adapters.StoriesModel
 import org.aviran.cookiebar2.CookieBar
@@ -17,6 +18,12 @@ import java.security.NoSuchAlgorithmException
 import java.security.SecureRandom
 import java.util.Base64
 
+
+val langList = listOf<LanguageData>(
+    LanguageData(R.drawable.ic_az, "Azerbaijani"),
+    LanguageData(R.drawable.ic_en, "English"),
+    LanguageData(R.drawable.ic_ru, "Russian"),
+)
 
 val listOfItems = listOf<StoriesModel>(
     StoriesModel((R.drawable.campaign1),  "https://images.pexels.com/photos/264636/pexels-photo-264636.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"),
