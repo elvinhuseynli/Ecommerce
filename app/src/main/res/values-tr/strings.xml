@@ -1,2 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="email_validation_str">E-posta adresinize gönderilen OTP kodunu girin</string>
+    <string name="email_unreceived_code">Kod almadınız mı?</string>
+    <string name="log_in_title">Giriş yap</string>
+    <string name="email_address_input">E-posta adresi</string>
+    <string name="password_input">Şifre</string>
+    <string name="no_acc">Hesabınız yok mu?</string>
+    <string name="sign_up_here">Buradan kayıt olun</string>
+    <string name="sign_up_title">Kayıt ol</string>
+    <string name="full_name_input">Tam ad</string>
+    <string name="confirm_password_input">Şifreyi onayla</string>
+    <string name="next_btn">İleri</string>
+    <string name="have_an_account">Hesabınız var mı?</string>
+    <string name="sign_in_here">Buradan giriş yapın</string>
+    <string name="confirm_btn">Onayla</string>
+    <string name="wrong_email_address">Yanlış e-posta adresi mi?</string>
+    <string name="edit_now_btn">Şimdi düzenle</string>
+    <string name="send_again">Tekrar gönder</string>
+    <string name="home_title">Ana Sayfa</string>
+    <string name="campaigns">Kampanyalar</string>
+    <string name="products">Ürünler</string>
+    <string name="see_all">Hepsini gör</string>
+    <string name="search_products">Ürünleri ara</string>
+    <string name="add_btn">Ekle</string>
+    <string name="cart">Sepet</string>
+    <string name="total">Toplam</string>
+    <string name="alsatx_store">AlSatX Mağazası</string>
+    <string name="search_locations">Konumları ara</string>
+    <string name="account_details">Hesap Detayları</string>
+    <string name="change_password">Şifre değiştir</string>
+    <string name="settings">Ayarlar</string>
+    <string name="favorite_products">Favori ürünler</string>
+    <string name="additional">Ekstra</string>
+    <string name="about_us">Hakkımızda</string>
+    <string name="contact_details">İletişim bilgileri</string>
+    <string name="terms_and_conditions">Şartlar ve koşullar</string>
+    <string name="log_out">Çıkış yap</string>
+    <string name="new_password">Yeni Şifre</string>
+    <string name="repeat_new_password">Yeni şifreyi tekrar girin</string>
+    <string name="update">Güncelle</string>
+    <string name="choose_language">Dil seç</string>
+
+</resources>

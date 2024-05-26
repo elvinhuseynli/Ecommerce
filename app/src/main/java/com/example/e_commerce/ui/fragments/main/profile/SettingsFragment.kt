@@ -45,6 +45,8 @@ class SettingsFragment : Fragment(), CustomSpinner.OnSpinnerEventsListener {
         when(currentLang) {
             "az"->binding.spinner.setSelection(0)
             "en"->binding.spinner.setSelection(1)
+            "ru"->binding.spinner.setSelection(2)
+            "tr"->binding.spinner.setSelection(3)
         }
     }
 
@@ -65,6 +67,7 @@ class SettingsFragment : Fragment(), CustomSpinner.OnSpinnerEventsListener {
                     0-> lang = "az"
                     1-> lang = "en"
                     2-> lang = "ru"
+                    3-> lang = "tr"
                 }
                 Lingver.getInstance().setLocale(requireContext(), lang)
             }

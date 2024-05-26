@@ -1,2 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="email_validation_str">Введите OTP-код, отправленный на ваш адрес электронной почты</string>
+    <string name="email_unreceived_code">Не получили код?</string>
+    <string name="log_in_title">Войти</string>
+    <string name="email_address_input">Адрес электронной почты</string>
+    <string name="password_input">Пароль</string>
+    <string name="no_acc">У вас нет аккаунта?</string>
+    <string name="sign_up_here">Зарегистрироваться здесь</string>
+    <string name="sign_up_title">Регистрация</string>
+    <string name="full_name_input">Полное имя</string>
+    <string name="confirm_password_input">Подтвердите пароль</string>
+    <string name="next_btn">Далее</string>
+    <string name="have_an_account">У вас уже есть аккаунт?</string>
+    <string name="sign_in_here">Войдите здесь</string>
+    <string name="confirm_btn">Подтвердить</string>
+    <string name="wrong_email_address">Неправильный адрес электронной почты?</string>
+    <string name="edit_now_btn">Редактировать сейчас</string>
+    <string name="send_again">Отправить снова</string>
+    <string name="home_title">Главная</string>
+    <string name="campaigns">Кампании</string>
+    <string name="products">Продукты</string>
+    <string name="see_all">Смотреть все</string>
+    <string name="search_products">Искать продукты</string>
+    <string name="add_btn">Добавить</string>
+    <string name="cart">Корзина</string>
+    <string name="total">Итого</string>
+    <string name="alsatx_store">Магазин AlSatX</string>
+    <string name="search_locations">Искать места</string>
+    <string name="account_details">Детали аккаунта</string>
+    <string name="change_password">Изменить пароль</string>
+    <string name="settings">Настройки</string>
+    <string name="favorite_products">Избранные продукты</string>
+    <string name="additional">Дополнительно</string>
+    <string name="about_us">О нас</string>
+    <string name="contact_details">Контактные данные</string>
+    <string name="terms_and_conditions">Условия и положения</string>
+    <string name="log_out">Выйти</string>
+    <string name="new_password">Новый пароль</string>
+    <string name="repeat_new_password">Повторите новый пароль</string>
+    <string name="update">Обновить</string>
+    <string name="choose_language">Выбрать язык</string>
+
+
+</resources>

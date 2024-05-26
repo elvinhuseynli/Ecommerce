@@ -20,9 +20,10 @@ import java.util.Base64
 
 
 val langList = listOf<LanguageData>(
-    LanguageData(R.drawable.ic_az, "Azerbaijani"),
+    LanguageData(R.drawable.ic_az, "Azərbaycanca"),
     LanguageData(R.drawable.ic_en, "English"),
-    LanguageData(R.drawable.ic_ru, "Russian"),
+    LanguageData(R.drawable.ic_ru, "Русский"),
+    LanguageData(R.drawable.ic_tr, "Türkçe")
 )
 
 val listOfItems = listOf<StoriesModel>(
